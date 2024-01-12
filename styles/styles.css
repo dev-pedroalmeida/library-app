@@ -1,0 +1,55 @@
+:root {
+  --primary-bg: #FFF7EC;
+  --accent-color: #52241D;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--primary-bg);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  padding: 10px 161px;
+  display: grid;
+  grid-template-columns: 1fr 150px 150px 50px;
+  align-items: center;
+}
+
+.logo {
+  color: var(--accent-color);
+  font-weight: 900;
+  font-size: 32px;
+}
+
+.navbar p {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.profile-icon {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.img-container {
+  margin: 10px 150px;
+  height: 82px;
+  background-image: url("/assets/bookshelf-background.jpg");
+  /* background-position-y: -80px; */
+  background-size: cover;
+  border-radius: 24px;
+  background-position: center 20%;
+}
+
+
+
