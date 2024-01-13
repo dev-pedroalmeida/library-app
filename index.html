@@ -27,9 +27,55 @@
     <div class="profile-icon"></div>
   </nav>
   
-  <div class="img-container">
-    <!-- <img src="/assets/bookshelf-background.jpg" alt="Bookshelf background element"> -->
-  </div>
+  <div class="img-container"></div>
+
+  <section>
+    <header class="content-header">
+      <h2>Your books</h2>
+
+      <button>
+        Add book
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+      </button>
+    </header>
+
+    <div class="book-list">
+
+      <div class="book-card">
+        <div class="book-details">
+          <div class="book-title">
+            Book Title
+          </div>
+          <div class="book-author">
+            Author
+          </div>
+        </div>
+
+        <div class="book-progress">
+          Progress
+          <div class="book-current">
+            <div class="book-pages">
+              123/300
+            </div>
+            <button class="secondary small">
+              Not read
+            </button>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </section>
+
+  <footer>
+    Feito por dev-pedroalmeida
+  </footer>
 
 
   <script src="./scripts/script.js"></script>
