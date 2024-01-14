@@ -16,12 +16,12 @@
 
     <p>
       Read books: 
-      <span></span>
+      <span id="read-books"></span>
     </p>
 
     <p>
       Total pages: 
-      <span></span>
+      <span id="total-pages"></span>
     </p>
 
     <div class="profile-icon"></div>
@@ -29,11 +29,11 @@
   
   <div class="img-container"></div>
 
-  <section>
+  <section class="content">
     <header class="content-header">
       <h2>Your books</h2>
 
-      <button>
+      <button id="add-book-btn">
         Add book
         <svg 
           xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
@@ -74,10 +74,47 @@
   </section>
 
   <footer>
-    Feito por dev-pedroalmeida
+    <div>
+      Feito por 
+      <a href="https://github.com/dev-pedroalmeida" target="_blank">dev-pedroalmeida</a>
+    </div>
+    
   </footer>
 
 
-  <script src="./scripts/script.js"></script>
+
+
+  <div class="book-modal-wrapper">
+    <div class="book-modal-overlay">
+      <div class="book-modal">
+        <div class="book-modal-title">
+          New book
+        </div>
+        <form method="post" class="book-form">
+          <label for="bookTitle">
+            Book title
+          </label>
+          <input type="text" name="bookTitle" id="bookTitle">
+  
+          <label for="bookAuthor">
+            Author
+          </label>
+          <input type="text" name="bookAuthor" id="bookAuthor">
+  
+          <label for="bookPages">
+            Number of pages
+          </label>
+          <input type="number" name="bookPages" id="bookPages">
+  
+          <button id="submit-book">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="module" src="./scripts/script.js"></script>
 </body>
 </html>
