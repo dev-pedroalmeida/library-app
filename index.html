@@ -20,7 +20,7 @@
     </p>
 
     <p>
-      Total pages: 
+      Read pages: 
       <span id="total-pages"></span>
     </p>
 
@@ -36,7 +36,8 @@
       <button id="add-book-btn">
         Add book
         <svg 
-          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
           <line x1="12" y1="5" x2="12" y2="19"></line>
           <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
@@ -45,7 +46,7 @@
 
     <div class="book-list">
 
-      <div class="book-card">
+      <!-- <div class="book-card">
         <div class="book-details">
           <div class="book-title">
             Book Title
@@ -56,17 +57,15 @@
         </div>
 
         <div class="book-progress">
-          Progress
+          <span>Progress (reading)</span>
           <div class="book-current">
             <div class="book-pages">
               123/300
             </div>
-            <button class="secondary small">
-              Not read
-            </button>
+            <button class="secondary small add-book"></button>
           </div>
         </div>
-      </div>
+      </div> -->
 
       
 
@@ -105,8 +104,17 @@
             Number of pages
           </label>
           <input type="number" name="bookPages" id="bookPages">
-  
-          <button id="submit-book">
+
+          <label for="isRead">
+            Have you read it?
+          </label>
+          <div class="form-row">
+            No
+            <input class="switch-checkbox" type="checkbox" name="isRead" id="isRead">
+            Yes
+          </div>
+          
+          <button id="submit-book" class="secondary">
             Submit
           </button>
         </form>

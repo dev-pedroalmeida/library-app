@@ -1,4 +1,4 @@
-import {newBook} from './newBook.js';
+import {newBook, createBookCard} from './newBook.js';
 
 let userData;
 
@@ -13,16 +13,23 @@ window.onload = () => {
   console.log("Loaded!")
 
   userData = JSON.parse(localStorage.getItem('library-app'));
-  console.log(userData)
+  console.log(userData);
 
   if(userData === null) {
     userData = {
-      userName: 'Pedro',
       readBooks: 0,
       totalPages: 0,
       books: []
     }
     localStorage.setItem('library-app', JSON.stringify(userData));
+  } else {
+    const books = userData.books;
+
+    books.forEach((book, index) => {
+      const bookCard = createBookCard(book.bookTitle, book.bookAuthor, book.bookIsRead, book.bookPages, book.readPages, index);
+      bookList.appendChild(bookCard);
+    })
+
   }
 
   readBooksSpan.textContent = userData.readBooks;
@@ -48,13 +55,12 @@ bookModalWrapper.addEventListener('click', (e) => {
 function submitNewBook (e) {
   e.preventDefault();
 
-  const a = newBook(e.target[0].value, e.target[1].value, e.target[2].value)
+  const bookCard = newBook(e.target[0].value, e.target[1].value, e.target[2].value, e.target[3].checked)
   
-  bookList.appendChild(a.bookCard);
+  bookList.appendChild(bookCard);
+
   e.target.reset()
   bookModalWrapper.classList.toggle('active');
-
-  console.log(e)
 }
 
 bookForm.addEventListener('submit', submitNewBook);
