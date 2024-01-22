@@ -127,7 +127,7 @@ img {
 .img-container {
   margin: 10px 150px;
   height: 62px;
-  background-image: url("/assets/bookshelf-background.jpg");
+  background-image: url("../assets/bookshelf-background.jpg");
   /* background-position-y: -80px; */
   background-size: cover;
   border-radius: 24px;
